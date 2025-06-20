@@ -23,8 +23,24 @@ Pod::Spec.new do |s|
   s.subspec 'min' do |ss|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
-    ss.vendored_frameworks  = 'Frameworks/ffmpegkit.framework'
     ss.ios.deployment_target = '12.1'
+    
+    ss.source = {
+      :http => 'https://github.com/RuslanAktaev/ffmpeg/releases/download/v6.0.2/ffmpegkit-ios.xcframework.zip',
+      :type => 'zip'
+    }
+    ss.vendored_frameworks = [
+      'ffmpegkit.xcframework',
+      'libavcodec.xcframework',
+      'libavdevice.xcframework',
+      'libavfilter.xcframework',
+      'libavformat.xcframework',
+      'libavutil.xcframework',
+      'libswresample.xcframework',
+      'libswscale.xcframework'
+    ]
+    ss.libraries = [ "z", "bz2", "c++", "iconv" ]
+    ss.frameworks = [ "AudioToolbox", "AVFoundation", "CoreMedia", "VideoToolbox" ]
   end
 
   s.subspec 'min-lts' do |ss|
