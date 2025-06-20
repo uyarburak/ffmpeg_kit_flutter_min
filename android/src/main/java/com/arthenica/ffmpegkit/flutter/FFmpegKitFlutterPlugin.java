@@ -28,6 +28,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.Keep;
 
 import com.arthenica.ffmpegkit.AbiDetect;
 import com.arthenica.ffmpegkit.AbstractSession;
@@ -75,6 +76,7 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry;
 
+@Keep
 public class FFmpegKitFlutterPlugin implements FlutterPlugin, ActivityAware, MethodCallHandler, EventChannel.StreamHandler, PluginRegistry.ActivityResultListener {
 
     public static final String LIBRARY_NAME = "ffmpeg-kit-flutter";

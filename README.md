@@ -6,8 +6,8 @@ This is a custom build of FFmpeg Kit for Flutter that uses locally built binarie
 
 - ✅ Custom built FFmpeg Kit binaries
 - ✅ Android support (min package)
-- ✅ iOS support (coming soon)
-- ✅ macOS support (coming soon)
+- ✅ iOS support
+- ❌ macOS support (not currently available)
 - ✅ No dependency on external hosting services
 
 ## Installation

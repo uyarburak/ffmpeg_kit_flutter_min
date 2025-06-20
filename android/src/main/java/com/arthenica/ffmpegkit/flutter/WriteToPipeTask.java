@@ -24,11 +24,13 @@ import static com.arthenica.ffmpegkit.flutter.FFmpegKitFlutterPlugin.LIBRARY_NAM
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Keep;
 
 import java.io.IOException;
 
 import io.flutter.plugin.common.MethodChannel;
 
+@Keep
 public class WriteToPipeTask implements Runnable {
     private final String inputPath;
     private final String namedPipePath;

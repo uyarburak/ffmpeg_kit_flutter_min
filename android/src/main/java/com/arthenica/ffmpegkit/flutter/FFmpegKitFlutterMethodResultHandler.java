@@ -25,9 +25,12 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
+import androidx.annotation.Keep;
+
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodChannel;
 
+@Keep
 public class FFmpegKitFlutterMethodResultHandler {
     private final Handler handler;
 

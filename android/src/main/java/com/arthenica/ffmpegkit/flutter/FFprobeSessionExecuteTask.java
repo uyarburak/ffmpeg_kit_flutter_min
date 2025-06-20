@@ -20,12 +20,14 @@
 package com.arthenica.ffmpegkit.flutter;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Keep;
 
 import com.arthenica.ffmpegkit.FFmpegKitConfig;
 import com.arthenica.ffmpegkit.FFprobeSession;
 
 import io.flutter.plugin.common.MethodChannel;
 
+@Keep
 public class FFprobeSessionExecuteTask implements Runnable {
     private final FFprobeSession ffprobeSession;
     private final FFmpegKitFlutterMethodResultHandler resultHandler;

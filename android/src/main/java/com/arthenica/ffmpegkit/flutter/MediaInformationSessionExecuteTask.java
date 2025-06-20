@@ -20,12 +20,14 @@
 package com.arthenica.ffmpegkit.flutter;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Keep;
 
 import com.arthenica.ffmpegkit.FFmpegKitConfig;
 import com.arthenica.ffmpegkit.MediaInformationSession;
 
 import io.flutter.plugin.common.MethodChannel;
 
+@Keep
 public class MediaInformationSessionExecuteTask implements Runnable {
     private final MediaInformationSession mediaInformationSession;
     private final int timeout;
