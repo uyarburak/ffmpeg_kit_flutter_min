@@ -6,12 +6,10 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/uyarburak/ffmpeg_kit_flutter_min'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'ARTHENICA' => 'open-source@arthenica.com' }
+  s.platform         = :ios, '12.1'
+  s.static_framework = true
+  s.requires_arc     = true
 
-  s.platform            = :ios
-  s.requires_arc        = true
-  s.static_framework    = true
-
-  s.source              = { :path => '.' }
   s.source_files        = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
 
@@ -21,7 +19,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.1'
   
   s.source = {
-    :http => 'https://github.com/RuslanAktaev/ffmpeg/releases/download/v6.0.2/ffmpegkit-ios.xcframework.zip',
+    :http => 'https://github.com/muhsin-k/ffmpeg/releases/download/6.0.2/ffmpegkit-ios.xcframework.zip',
     :type => 'zip'
   }
   s.vendored_frameworks = [
@@ -34,6 +32,7 @@ Pod::Spec.new do |s|
     'libswresample.xcframework',
     'libswscale.xcframework'
   ]
+
   s.libraries = [ "z", "bz2", "c++", "iconv" ]
   s.frameworks = [ "AudioToolbox", "AVFoundation", "CoreMedia", "VideoToolbox" ]
 end
